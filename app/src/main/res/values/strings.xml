@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">Transformers</string>
+
+    <string name="digit_abc">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <!--Exception message-->
+    <string name="exception_error_network">It seems that your internet connection is not found please check your connection.</string>
+    <string name="exception_error_server">Server is under maintenance, please try after some time.</string>
+    <string name="exception_error_unparceble">Unknown data found from server.</string>
+    <string name="exception_error_database">Database error</string>
+
+    <!--Error strings-->
+    <string name="error_empty">Field cannot be empty</string>
+    <string name="something_went_wrong">Something went wrong!</string>
+
+    <!--Permission strings-->
+    <string name="permission_error">App requires permission to access future</string>
+    <string name="permission_storage">Allow access to photos</string>
+    <string name="permission_location">Allow access to your location</string>
+    <string name="permission_audio">Please grant audio permission for record your voice</string>
+    <string name="location_error">We are unable to find your device location, Kindly follow below steps to use the application.\n
+        - Restart the your device\n
+        - Make sure your device location is turned on\n
+        - Open Google Map application\n</string>
+    <string name="permission_always_denied">You have denied the permission permanently, Kindly go to "Settings" and allow for permission to access this feature.</string>
+    <string name="str_location_hint_1">Allow “Application” to access\nYour location?</string>
+    <string name="str_location_jint">We need to access your location to show you relevant search results</string>
+    <string name="str_location_fetching">Finding Location</string>
+    <string name="gps_permission_msg">GPS is disabled in your device. Would you like to enable it?</string>
+
+    <string name="default_notification_channel_id">1</string>
+    <string name="no_data_found">No Transformer found</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="settings">Settings</string>
+
+    <!--login singup module and other strings-->
+    <string name="str_continue">Continue</string>
+    <string name="skip">Skip</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="logout_question">Are you sure you want to logout?</string>
+
+
+    <!--Army!!! Please add more strings below-->
+
+
+    <string name="name">Name</string>
+    <string name="validation_fullname">Name must be minimum 5 characters</string>
+    <string name="validation_team">Select team type</string>
+
+
+    <string name="strength">Strength: %s</string>
+    <string name="intelligence">Intelligence: %s</string>
+    <string name="speed">Speed: %s</string>
+    <string name="endurance">Endurance: %s</string>
+    <string name="rank">Rank: %s</string>
+    <string name="courage">Courage: %s</string>
+    <string name="firepower">Firepower: %s</string>
+    <string name="skill">Skill: %s</string>
+
+    <string name="strength_t">Strength:</string>
+    <string name="intelligence_t">Intelligence:</string>
+    <string name="speed_t">Speed:</string>
+    <string name="endurance_t">Endurance:</string>
+    <string name="rank_t">Rank:</string>
+    <string name="courage_t">Courage:</string>
+    <string name="firepower_t">Firepower:</string>
+    <string name="skill_t">Skill:</string>
+
+
+    <string name="add_transformer">Add Transformer</string>
+    <string name="update_transformer">Update Transformer</string>
+
+    <string name="add_transformer_success">Add Transformer Successfully</string>
+    <string name="update_transformer_success">Update Transformer Successfully</string>
+
+    <string name="delete_transformer_warning">Are you sure do you wants to delete transformer?</string>
+    <string name="delete_transformer_success">Delete Transformer Successfully</string>
+    <string name="transformer_not_found">Transformer not found</string>
+
+    <string name="select_team">Select Team</string>
+    <string name="team_autobot">Autobot</string>
+    <string name="team_decepticon">Decepticon</string>
+    <string name="save">Save</string>
+
+    <string name="battle">Battle</string>
+    <string name="start_battle">Start Battle</string>
+    <string name="battle_not_possible">Battle Not Possible</string>
+    <string name="battle_warning">Minimum one transformer required from team Autobot and Decepticon</string>
+    <string name="team_A_win">Team Autobot win!</string>
+    <string name="team_D_win">Team Decepticon win!</string>
+    <string name="tie">Opps Match Tie!</string>
+    <string name="distroy_message">Opps, Everything destroyed!</string>
+
+
+</resources>

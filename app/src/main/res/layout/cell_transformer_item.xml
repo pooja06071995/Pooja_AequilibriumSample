@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.companyname.android.data.models.Transformer" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivImage"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_border_color="#333333"
+                app:riv_border_width="@dimen/_1sdp"
+                app:riv_corner_radius="25dp"
+                app:riv_mutate_background="true"
+                app:riv_oval="true"
+                app:riv_tile_mode="clamp"
+                tools:src="@tools:sample/avatars" />
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_0"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/ivImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivImage"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    style="@style/tvStyleBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewmodel.name}"
+                    android:textColor="@color/colorTextPrimary"
+                    tools:text="@tools:sample/lorem" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSubTitle"
+                    style="@style/tvStyleRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextSecondary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivImage"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                    tools:text="@tools:sample/lorem" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:max="5"
+                    android:progressBackgroundTint="@color/colorTextSecondary"
+                    android:progressTint="@color/colorRed"
+                    android:rating="3.3"
+                    android:stepSize="0.1" />
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/margin_8"
+                android:src="@drawable/icn_delete"
+                android:tint="@color/colorBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEdit"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/margin_8"
+                android:src="@drawable/ic_edit"
+                android:tint="@color/colorBlack"
+                app:layout_constraintEnd_toStartOf="@id/ivDelete"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <View
+                android:id="@+id/viewHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivImage" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStrength"
+                style="@style/tvStyleRegular"
+                android:text="@{String.format(@string/strength, viewmodel.strength)}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/text_caption"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewHorizontal"
+                tools:text="@string/strength" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvIntelligence"
+                style="@style/tvStyleRegular"
+                android:text="@{String.format(@string/intelligence, viewmodel.intelligence)}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/text_caption"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/viewHorizontal"
+                tools:text="@string/intelligence" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSpeed"
+                style="@style/tvStyleRegular"
+                android:text="@{String.format(@string/speed, viewmodel.speed)}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/text_caption"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStrength"
+                tools:text="@string/speed" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEndurance"
+                style="@style/tvStyleRegular"
+                android:text="@{String.format(@string/endurance, viewmodel.endurance)}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/text_caption"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/tvIntelligence"
+                tools:text="@string/endurance" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRank"
+                style="@style/tvStyleRegular"
+                android:text="@{String.format(@string/rank, viewmodel.rank)}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/text_caption"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSpeed"
+                tools:text="@string/rank" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCourage"
+                style="@style/tvStyleRegular"
+                android:text="@{String.format(@string/courage, viewmodel.courage)}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/text_caption"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/tvEndurance"
+                tools:text="@string/courage" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFirePower"
+                style="@style/tvStyleRegular"
+                android:text="@{String.format(@string/firepower, viewmodel.firepower)}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/text_caption"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRank"
+                tools:text="@string/firepower" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSkill"
+                style="@style/tvStyleRegular"
+                android:text="@{String.format(@string/skill, viewmodel.skill)}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/text_caption"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/tvCourage"
+                tools:text="@string/skill" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

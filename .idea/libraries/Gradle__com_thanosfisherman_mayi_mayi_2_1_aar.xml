@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.thanosfisherman.mayi:mayi:2.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/45dcbf56f2dd6ee5283f7fcc20dc9ff4/jetified-mayi-2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/45dcbf56f2dd6ee5283f7fcc20dc9ff4/jetified-mayi-2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/45dcbf56f2dd6ee5283f7fcc20dc9ff4/jetified-mayi-2.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.thanosfisherman.mayi/mayi/2.1/ef229e7f0f8b09fb234599877438e4dac0e67d6f/mayi-2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

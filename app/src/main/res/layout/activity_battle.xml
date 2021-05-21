@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".presentation.transformers.BattleActivity">
+
+    <include
+        android:id="@+id/llToolbarMain"
+        layout="@layout/layout_toolbar_main" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivTeamA"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_margin="@dimen/margin_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llToolbarMain"
+        tools:src="@tools:sample/avatars" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTeamA"
+        style="@style/tvStyleRegular"
+        app:layout_constraintBottom_toBottomOf="@id/ivTeamA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivTeamA"
+        app:layout_constraintTop_toTopOf="@id/ivTeamA"
+        tools:text="@string/app_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvVS"
+        style="@style/tvStyleBold"
+        android:layout_margin="@dimen/margin_16"
+        android:text="VS"
+        android:textSize="@dimen/text_header_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivTeamA" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivTeamB"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvVS"
+        tools:src="@tools:sample/avatars" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTeamB"
+        style="@style/tvStyleRegular"
+        app:layout_constraintBottom_toBottomOf="@id/ivTeamB"
+        app:layout_constraintEnd_toStartOf="@id/ivTeamB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivTeamB"
+        tools:text="@string/app_name" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBattle"
+        style="@style/btnStyle"
+        android:layout_margin="@dimen/margin_16"
+        android:text="@string/start_battle"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

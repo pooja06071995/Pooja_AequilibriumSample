@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "191320058312",
+    "firebase_url": "https://vhub-62f3f.firebaseio.com",
+    "project_id": "vhub-62f3f",
+    "storage_bucket": "vhub-62f3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191320058312:android:1e487d704ab13f943ff8fd",
+        "android_client_info": {
+          "package_name": "com.android.architecture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "191320058312-f0knask7udaancbpud6hqqr7rd1ejkdh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbKG1ebCxyKO9blCOmP0efmutqvuFKVwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "191320058312-f0knask7udaancbpud6hqqr7rd1ejkdh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "191320058312-6vrkpn0m3dbnd8d3njcql6lm9hipvim2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.eppme.vhub"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
